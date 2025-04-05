@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sashank Sai - AI Specialist Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav id="header" role="navigation">
+            <div class="nav-logo">
+                <p class="nav-name">Sashank Sai</p>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list"><a href="#home" class="nav-link active-link" id="homee">Home</a><div class="circle"></div></li>
+                    <li class="nav_list"><a href="#about" class="nav-link">About</a><div class="circle"></div></li>
+                    <li class="nav_list"><a href="#projects" class="nav-link">Projects</a><div class="circle"></div></li>
+                    <li class="nav_list"><a href="#certifications" class="nav-link">Certifications</a><div class="circle"></div></li>
+                    <li class="nav_list"><a href="#contact" class="nav-link">Contact</a><div class="circle"></div></li>
+                </ul>
+            </div>
+            <div class="mode">
+                <div class="moon-sun" id="toggle-switch">
+                    <i class="fa fa-moon" id="moon"></i>
+                    <i class="fa fa-sun" id="sun"></i>
+                </div>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <main class="wrapper">
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="hello">
+                        <p>Hello, I'm</p>
+                    </div>
+                    <div class="featured-name">
+                        <span>Sashank Sai</span>
+                    </div>
+                    <div class="text-info">
+                        <span class="typedText"></span>
+                    </div>
+                    <div class="text-btn">
+                        <button class="btn hire-btn" aria-label="Hire me">Hire Me</button>
+                        <a href="Sashank_Sai_Resume.pdf" download class="btn" aria-label="Download CV">Download CV <i class="uil uil-file"></i></a>
+                    </div>
+                    <div class="social_icons">
+                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-twitter"></i></a></div>
+                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-instagram"></i></a></div>
+                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+                    </div>
+                </div>
+                <div class="featured-3d">
+                    <div class="slideshow-3d">
+                        <canvas id="modelCanvas" class="model-canvas"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info card-3d">
+                            <figure class="about-me">
+                                <figcaption>
+                                    <h2>Aspiring AI Specialist</h2>
+                                    <p>I’m Sashank Sai, a sophomore at Amrita University pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence (CGPA: 9.55). With a strong academic foundation from Gomathy Global School (93% in MPC), I excel in problem-solving and programming in C, Java, Python, and JavaScript. My passion lies in AI/ML, demonstrated through projects like Plant Disease Detection during my Infosys internship. I’m eager to innovate and collaborate on impactful AI solutions.</p>
+                                </figcaption>
+                            </figure>
+                            <button class="about-me-btn hire-btn" aria-label="Hire me">Hire Me</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skill card-3d">
+                            <div class="neural-network-3d">
+                                <div class="node"></div>
+                                <div class="node"></div>
+                                <div class="node"></div>
+                            </div>
+                            <div class="skill-box"><span class="title">Python</span><div class="skill-bar"><span class="skill-per python"><span class="tooltip">90%</span></span></div></div>
+                            <div class="skill-box"><span class="title">Java</span><div class="skill-bar"><span class="skill-per java"><span class="tooltip">85%</span></span></div></div>
+                            <div class="skill-box"><span class="title">C</span><div class="skill-bar"><span class="skill-per c"><span class="tooltip">80%</span></span></div></div>
+                            <div class="skill-box"><span class="title">JavaScript</span><div class="skill-bar"><span class="skill-per javascript"><span class="tooltip">70%</span></span></div></div>
+                            <div class="skill-box"><span class="title">HTML/CSS</span><div class="skill-bar"><span class="skill-per html-css"><span class="tooltip">75%</span></span></div></div>
+                            <div class="skill-box"><span class="title">AI/ML</span><div class="skill-bar"><span class="skill-per aiml"><span class="tooltip">65%</span></span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="projects-container">
+                    <div class="project-box card-3d">
+                        <i class="uil uil-brain"></i>
+                        <h3>Plant Disease Detection</h3>
+                        <label>Developed during Infosys Internship using TensorFlow and scikit-learn for accurate plant disease identification from images.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-face"></i>
+                        <h3>Face Detection</h3>
+                        <label>Implemented using pre-trained models to detect faces in images.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-game-structure"></i>
+                        <h3>Tic Tac Toe AI</h3>
+                        <label>Rule-based reflex agent using Minimax algorithm for an unbeatable Tic Tac Toe game.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-chat"></i>
+                        <h3>Simple Chatbot</h3>
+                        <label>Created a rule-based chatbot with basic conversational abilities.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-mobile-android"></i>
+                        <h3>To-Do List App</h3>
+                        <label>Android app for task management with a user-friendly interface.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-calculator"></i>
+                        <h3>Calculator App</h3>
+                        <label>Android app for basic arithmetic operations.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-cloud-sun"></i>
+                        <h3>Weather Forecasting</h3>
+                        <label>Web app using an API to display real-time weather data.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-game"></i>
+                        <h3>Touch No Fire Game</h3>
+                        <label>JavaScript-based game testing reflexes and coordination.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-link"></i>
+                        <h3>Blockchain Implementation</h3>
+                        <label>Basic blockchain system demonstrating core concepts like hashing and chaining.</label>
+                    </div>
+                    <div class="project-box card-3d">
+                        <i class="uil uil-brain"></i>
+                        <h3>Basic Neural Network (MNIST)</h3>
+                        <label>Designed and trained a neural network using TensorFlow to classify handwritten digits from the MNIST dataset.</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="certifications">
+                <div class="top-header">
+                    <h1>Certifications & Awards</h1>
+                </div>
+                <div class="certifications-container">
+                    <div class="cert-box card-3d">
+                        <i class="uil uil-award"></i>
+                        <h3>Data Science Certification</h3>
+                        <label>NPTEL (Top 5%, Elite+Silver)</label>
+                    </div>
+                    <div class="cert-box card-3d">
+                        <i class="uil uil-trophy"></i>
+                        <h3>Excellence in Academics</h3>
+                        <label>Gomathy Global School (2021)</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Let's Work Together</h1>
+                    <span>Contact me for AI/ML projects or collaboration opportunities</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info card-3d">
+                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i> sashanksuperking@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> +91 9100439645</p>
+                        </div>
+                    </div>
+                    <div class="formcontrol">
+                        <form id="contact-form">
+                            <div class="form-inputs">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" class="input-field" placeholder="Your name" required>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" class="input-field" placeholder="Your Email" required>
+                            </div>
+                            <div class="text-area">
+                                <label for="subject">Subject:</label>
+                                <input type="text" id="subject" class="input-field" placeholder="Subject" required>
+                                <label for="message">Message:</label>
+                                <textarea id="message" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list"><a href="#home">Home</a></li>
+                    <li class="footer_menu_list"><a href="#about">About</a></li>
+                    <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+                    <li class="footer_menu_list"><a href="#certifications">Certifications</a></li>
+                    <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <div class="icon"><a href="#" target="_blank"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="#" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href="#" target="_blank"><i class="uil uil-twitter"></i></a></div>
+                <div class="icon"><a href="#" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright © <a href="#home" style="text-decoration: none;">Sashank Sai</a> - All rights reserved 2025</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
