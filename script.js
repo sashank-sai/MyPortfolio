@@ -349,20 +349,102 @@ window.addEventListener("scroll", scrollActive);
 // Form submission
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
-    contactForm.addEventListener("submit", async function(e) {
+    // Initialize EmailJS with your public key (userID)
+    emailjs.init("YKVdZ7XPVO26YzyKF"); // Replace with your EmailJS User ID
+
+    contactForm.addEventListener("submit", async function (e) {
         e.preventDefault();
+
+        // Collect form data
         const formData = {
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
             subject: document.getElementById("subject").value,
             message: document.getElementById("message").value
         };
-        console.log("Form submitted:", formData);
-        alert("Thank you for your message! I'll respond soon.");
-        this.reset();
+
+        try {
+            // Send email using EmailJS
+            const response = await emailjs.send(
+                "service_84k4yan", // Replace with your EmailJS Service ID
+                "template_o2cmod9", // Replace with your EmailJS Template ID
+                formData
+            );
+
+            // Success feedback
+            console.log("Email sent successfully:", response);
+            showFeedback("Thank you for your message! I'll respond soon.", "success");
+            alert("Message sent successfully!");
+            this.reset();
+            document.getElementById("name").focus(); // Refocus for accessibility
+        } catch (error) {
+            // Error feedback
+            console.error("Failed to send email:", JSON.stringify(error, null, 2));
+            const errorMessage = error.text || "Unknown error";
+            showFeedback(`Failed to send message: ${errorMessage}`, "error");
+            alert(`Failed to send message: ${errorMessage}`);
+        }
+        finally {
+            // Re-enable submit button
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send";
+            }
+        }
     });
+    function showFeedback(message, type) {
+        console.log(`Showing feedback: ${message} (${type})`);
+        const feedbackElement = document.createElement("div");
+        feedbackElement.className = `feedback ${type}`;
+        feedbackElement.textContent = message;
+        feedbackElement.setAttribute("role", "alert");
+        feedbackElement.setAttribute("aria-live", "polite");
+    
+        // Inline styling (move to style.css for production)
+        feedbackElement.style.position = "fixed";
+        feedbackElement.style.top = "20px";
+        feedbackElement.style.right = "20px";
+        feedbackElement.style.padding = "10px 20px";
+        feedbackElement.style.borderRadius = "5px";
+        feedbackElement.style.zIndex = "1000";
+        feedbackElement.style.color = "#fff";
+        feedbackElement.style.backgroundColor = type === "success" ? "#28a745" : "#dc3545";
+        feedbackElement.style.transition = "opacity 0.3s ease";
+    
+        document.body.appendChild(feedbackElement);
+    
+        // Fade out and remove after 3 seconds
+        setTimeout(() => {
+            feedbackElement.style.opacity = "0";
+            setTimeout(() => feedbackElement.remove(), 300);
+        }, 3000);
+    }
 }
 
+// Helper function to display feedback (replacing alert)
+function showFeedback(message, type) {
+    const feedbackElement = document.createElement("div");
+    feedbackElement.className = `feedback ${type}`;
+    feedbackElement.textContent = message;
+    feedbackElement.setAttribute("role", "alert"); // Accessibility
+
+    // Basic styling for feedback
+    feedbackElement.style.position = "fixed";
+    feedbackElement.style.top = "20px";
+    feedbackElement.style.right = "20px";
+    feedbackElement.style.padding = "10px 20px";
+    feedbackElement.style.borderRadius = "5px";
+    feedbackElement.style.zIndex = "1000";
+    feedbackElement.style.color = "#fff";
+    feedbackElement.style.backgroundColor = type === "success" ? "#28a745" : "#dc3545";
+
+    document.body.appendChild(feedbackElement);
+
+    // Remove feedback after 3 seconds
+    setTimeout(() => {
+        feedbackElement.remove();
+    }, 3000);
+}
 // Additional functionality
 document.addEventListener("DOMContentLoaded", () => {
     scrollActive();
@@ -383,7 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".hire-btn").forEach(btn => {
         btn.addEventListener("click", () => {
-            window.location.href = "mailto:sashanksuperking@gmail.com?subject=Hiring Inquiry";
+            window.location.href = "mailto:kapulurusashank@gmail.com?subject=Hiring Inquiry";
         });
     });
 });

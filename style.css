@@ -38,7 +38,7 @@ body.dark {
     --box-color: #fff;
     --nav-color: #262425;
     --color-white: #fff;
-    --text-color: #fff;
+    --text-color: #e0e0e0; /* Improved contrast */
     --nav-icon: #fff;
     --logo-color: #fff;
     --icon-color: var(--second-color);
@@ -332,19 +332,6 @@ body.dark #moon {
 .skill {
     position: relative;
 }
-.skill-per {
-    display: block;
-    height: 100%;
-    border-radius: 6px;
-    background: var(--second-color);
-    position: relative;
-    width: 0; /* Start at 0 width */
-    transition: width 0.4s ease-in-out; /* Smooth transition */
-}
-
-.skill-per.visible {
-    animation: none; /* Disable original animation */
-}
 
 .neural-network-3d {
     position: absolute;
@@ -399,20 +386,12 @@ body.dark #moon {
     border-radius: 6px;
     background: var(--second-color);
     position: relative;
-    animation: progress 0.4s ease-in-out forwards;
-    opacity: 0;
+    width: 0; /* Start at 0 width */
+    transition: width 0.4s ease-in-out;
 }
 
-.skill-per.python { width: 90%; animation-delay: 0.1s; }
-.skill-per.java { width: 85%; animation-delay: 0.1s; }
-.skill-per.c { width: 80%; animation-delay: 0.1s; }
-.skill-per.javascript { width: 70%; animation-delay: 0.1s; }
-.skill-per.html-css { width: 75%; animation-delay: 0.1s; }
-.skill-per.aiml { width: 65%; animation-delay: 0.1s; }
-
-@keyframes progress {
-    0% { width: 0; opacity: 1; }
-    100% { opacity: 1; }
+.skill-per.visible {
+    width: inherit; /* Set by JavaScript */
 }
 
 .skill-per .tooltip {
@@ -426,6 +405,12 @@ body.dark #moon {
     background: var(--second-color);
     z-index: 1;
 }
+.skill-per.python { width: 90%; }
+.skill-per.java { width: 85%; }
+.skill-per.c { width: 80%; }
+.skill-per.javascript { width: 70%; }
+.skill-per.html-css { width: 90%; }
+.skill-per.aiml { width: 85%; }
 
 .projects-container {
     display: flex;
@@ -457,13 +442,21 @@ body.dark #moon {
     color: var(--text-color);
 }
 
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
 .project-box:hover {
     background: var(--second-color);
 }
 
 .project-box:hover i,
 .project-box:hover h3,
-.project-box:hover label {
+.project-box:hover label,
+.project-box:hover .project-links a {
     color: #fff;
 }
 
@@ -671,5 +664,10 @@ footer {
 
     .form-inputs {
         flex-direction: column;
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: center;
     }
 }
