@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sashank Sai - AI Specialist Portfolio showcasing AI/ML projects and skills">
+    <meta property="og:title" content="Sashank Sai Portfolio">
+    <meta property="og:description" content="Explore my AI/ML projects and skills">
+    <meta property="og:image" content="https://your-domain.com/preview-image.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Sashank Sai - AI Specialist Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <noscript>Your browser does not support JavaScript or it is disabled. Please enable JavaScript to view the 3D models and interactive features.</noscript>
     <div class="container">
         <nav id="header" role="navigation">
             <div class="nav-logo">
@@ -16,7 +24,7 @@
             </div>
             <div class="nav-menu" id="myNavMenu">
                 <ul class="nav_menu_list">
-                    <li class="nav_list"><a href="#home" class="nav-link active-link" id="homee">Home</a><div class="circle"></div></li>
+                    <li class="nav_list"><a href="#home" class="nav-link active-link" id="homee" aria-current="page">Home</a><div class="circle"></div></li>
                     <li class="nav_list"><a href="#about" class="nav-link">About</a><div class="circle"></div></li>
                     <li class="nav_list"><a href="#projects" class="nav-link">Projects</a><div class="circle"></div></li>
                     <li class="nav_list"><a href="#certifications" class="nav-link">Certifications</a><div class="circle"></div></li>
@@ -24,13 +32,13 @@
                 </ul>
             </div>
             <div class="mode">
-                <div class="moon-sun" id="toggle-switch">
-                    <i class="fa fa-moon" id="moon"></i>
-                    <i class="fa fa-sun" id="sun"></i>
+                <div class="moon-sun" id="toggle-switch" role="button" aria-label="Toggle dark mode">
+                    <i class="fa fa-moon" id="moon" aria-hidden="true"></i>
+                    <i class="fa fa-sun" id="sun" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="nav-menu-btn">
-                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+                <i class="uil uil-bars" onclick="myMenuFunction()" role="button" aria-label="Toggle mobile menu"></i>
             </div>
         </nav>
 
@@ -47,19 +55,19 @@
                         <span class="typedText"></span>
                     </div>
                     <div class="text-btn">
-                        <button class="btn hire-btn" aria-label="Hire me">Hire Me</button>
-                        <a href="Sashank_Sai_Resume.pdf" download class="btn" aria-label="Download CV">Download CV <i class="uil uil-file"></i></a>
+                        <button class="btn hire-btn" aria-label="Hire me" tabindex="0">Hire Me</button>
+                        <a href="Sashank_Sai_Resume.pdf" download class="btn" aria-label="Download CV" tabindex="0">Download CV <i class="uil uil-file"></i></a>
                     </div>
                     <div class="social_icons">
-                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-twitter"></i></a></div>
-                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-instagram"></i></a></div>
-                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
-                        <div class="icon"><a href="#" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+                        <div class="icon"><a href="https://twitter.com/your-profile" target="_blank" aria-label="Visit my Twitter profile"><i class="uil uil-twitter"></i></a></div>
+                        <div class="icon"><a href="https://instagram.com/your-profile" target="_blank" aria-label="Visit my Instagram profile"><i class="uil uil-instagram"></i></a></div>
+                        <div class="icon"><a href="linkedin.com/in/sashank-sai-b5b71728b" target="_blank" aria-label="Visit my LinkedIn profile"><i class="uil uil-linkedin-alt"></i></a></div>
+                        <div class="icon"><a href="https://github.com/sashank-sai" target="_blank" aria-label="Visit my GitHub profile"><i class="uil uil-github-alt"></i></a></div>
                     </div>
                 </div>
                 <div class="featured-3d">
                     <div class="slideshow-3d">
-                        <canvas id="modelCanvas" class="model-canvas"></canvas>
+                        <canvas id="modelCanvas" class="model-canvas" aria-label="Interactive 3D model background"></canvas>
                     </div>
                 </div>
             </section>
@@ -74,10 +82,10 @@
                             <figure class="about-me">
                                 <figcaption>
                                     <h2>Aspiring AI Specialist</h2>
-                                    <p>I’m Sashank Sai, a sophomore at Amrita University pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence (CGPA: 9.55). With a strong academic foundation from Gomathy Global School (93% in MPC), I excel in problem-solving and programming in C, Java, Python, and JavaScript. My passion lies in AI/ML, demonstrated through projects like Plant Disease Detection during my Infosys internship. I’m eager to innovate and collaborate on impactful AI solutions.</p>
+                                    <p>I'm Sashank Sai, a sophomore at Amrita University pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence (CGPA: 9.55). With a strong academic foundation from Gomathy Global School (93% in MPC), I excel in problem-solving and programming in C, Java, Python, and JavaScript. My passion lies in AI/ML, demonstrated through projects like Plant Disease Detection during my Infosys internship. I’m eager to innovate and collaborate on impactful AI solutions.</p>
                                 </figcaption>
                             </figure>
-                            <button class="about-me-btn hire-btn" aria-label="Hire me">Hire Me</button>
+                            <button class="about-me-btn hire-btn" aria-label="Hire me" tabindex="0">Hire Me</button>
                         </div>
                     </div>
                     <div class="col">
@@ -91,8 +99,8 @@
                             <div class="skill-box"><span class="title">Java</span><div class="skill-bar"><span class="skill-per java"><span class="tooltip">85%</span></span></div></div>
                             <div class="skill-box"><span class="title">C</span><div class="skill-bar"><span class="skill-per c"><span class="tooltip">80%</span></span></div></div>
                             <div class="skill-box"><span class="title">JavaScript</span><div class="skill-bar"><span class="skill-per javascript"><span class="tooltip">70%</span></span></div></div>
-                            <div class="skill-box"><span class="title">HTML/CSS</span><div class="skill-bar"><span class="skill-per html-css"><span class="tooltip">75%</span></span></div></div>
-                            <div class="skill-box"><span class="title">AI/ML</span><div class="skill-bar"><span class="skill-per aiml"><span class="tooltip">65%</span></span></div></div>
+                            <div class="skill-box"><span class="title">HTML/CSS</span><div class="skill-bar"><span class="skill-per html-css"><span class="tooltip">90%</span></span></div></div>
+                            <div class="skill-box"><span class="title">AI/ML</span><div class="skill-bar"><span class="skill-per aiml"><span class="tooltip">85%</span></span></div></div>
                         </div>
                     </div>
                 </div>
@@ -107,51 +115,93 @@
                         <i class="uil uil-brain"></i>
                         <h3>Plant Disease Detection</h3>
                         <label>Developed during Infosys Internship using TensorFlow and scikit-learn for accurate plant disease identification from images.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/Garbage-Analysis-Detection" target="_blank" class="btn" aria-label="View Plant Disease Detection code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Plant Disease Detection live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
-                        <i class="uil uil-face"></i>
+                        <i class="uil highway uil-face"></i>
                         <h3>Face Detection</h3>
                         <label>Implemented using pre-trained models to detect faces in images.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/AiFaceRecogization" target="_blank" class="btn" aria-label="View Face Detection code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Face Detection live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-game-structure"></i>
                         <h3>Tic Tac Toe AI</h3>
                         <label>Rule-based reflex agent using Minimax algorithm for an unbeatable Tic Tac Toe game.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/TicTacToe" target="_blank" class="btn" aria-label="View Tic Tac Toe AI code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Tic Tac Toe AI live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-chat"></i>
                         <h3>Simple Chatbot</h3>
                         <label>Created a rule-based chatbot with basic conversational abilities.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/RuleBasedReflexAgent" target="_blank" class="btn" aria-label="View Simple Chatbot code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Simple Chatbot live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-mobile-android"></i>
                         <h3>To-Do List App</h3>
                         <label>Android app for task management with a user-friendly interface.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/TO-DO-LIST" target="_blank" class="btn" aria-label="View To-Do List App code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View To-Do List App live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-calculator"></i>
                         <h3>Calculator App</h3>
                         <label>Android app for basic arithmetic operations.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/CalculatorApp" target="_blank" class="btn" aria-label="View Calculator App code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Calculator App live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-cloud-sun"></i>
                         <h3>Weather Forecasting</h3>
                         <label>Web app using an API to display real-time weather data.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/Garbage-Analysis-Detection" target="_blank" class="btn" aria-label="View Weather Forecasting code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Weather Forecasting live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-game"></i>
                         <h3>Touch No Fire Game</h3>
                         <label>JavaScript-based game testing reflexes and coordination.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/Touch-no-Fire-game" target="_blank" class="btn" aria-label="View Touch No Fire Game code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Touch No Fire Game live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-link"></i>
                         <h3>Blockchain Implementation</h3>
                         <label>Basic blockchain system demonstrating core concepts like hashing and chaining.</label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/BLOCK_CHAIN" target="_blank" class="btn" aria-label="View Blockchain Implementation code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View Blockchain Implementation live demo">Live Demo</a>
+                        </div>
                     </div>
                     <div class="project-box card-3d">
                         <i class="uil uil-brain"></i>
-                        <h3>Basic Neural Network (MNIST)</h3>
-                        <label>Designed and trained a neural network using TensorFlow to classify handwritten digits from the MNIST dataset.</label>
+                        <h3>Neural Network CNN (MobileNet) </h3>
+                        <label>The objective of this project is to develop a convolutional neural network (CNN) based on the
+                            MobileNetV2 architecture to classify retinal images into two categories: Normal and Diabetes
+                           </label>
+                        <div class="project-links">
+                            <a href="https://github.com/sashank-sai/DiabeticsRetenopathyDetection" target="_blank" class="btn" aria-label="View MNIST Neural Network code on GitHub">View Code</a>
+                            <a href="https://your-demo-link" target="_blank" class="btn" aria-label="View MNIST Neural Network live demo">Live Demo</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -183,7 +233,7 @@
                     <div class="col">
                         <div class="contact-info card-3d">
                             <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                            <p><i class="uil uil-envelope"></i> sashanksuperking@gmail.com</p>
+                            <p><i class="uil uil-envelope"></i>kapulurusashank@gmail.com</p>
                             <p><i class="uil uil-phone"></i> +91 9100439645</p>
                         </div>
                     </div>
@@ -202,7 +252,7 @@
                                 <textarea id="message" placeholder="Message" required></textarea>
                             </div>
                             <div class="form-button">
-                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                                <button type="submit" class="btn" tabindex="0">Send <i class="uil uil-message"></i></button>
                             </div>
                         </form>
                     </div>
@@ -221,10 +271,10 @@
                 </ul>
             </div>
             <div class="footer-social-icons">
-                <div class="icon"><a href="#" target="_blank"><i class="uil uil-instagram"></i></a></div>
-                <div class="icon"><a href="#" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
-                <div class="icon"><a href="#" target="_blank"><i class="uil uil-twitter"></i></a></div>
-                <div class="icon"><a href="#" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+                <div class="icon"><a href="https://instagram.com/your-profile" target="_blank" aria-label="Visit my Instagram profile"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="linkedin.com/in/sashank-sai-b5b71728b" target="_blank" aria-label="Visit my LinkedIn profile"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href="https://twitter.com/your-profile" target="_blank" aria-label="Visit my X profile"><i class="uil uil-x"></i></a></div>
+                <div class="icon"><a href="https://github.com/sashank-sai" target="_blank" aria-label="Visit my GitHub profile"><i class="uil uil-github-alt"></i></a></div>
             </div>
             <div class="bottom-footer">
                 <p>Copyright © <a href="#home" style="text-decoration: none;">Sashank Sai</a> - All rights reserved 2025</p>
@@ -235,6 +285,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
